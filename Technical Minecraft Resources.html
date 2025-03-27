@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Technical Minecraft Resources</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1, h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+
+        .resource-section {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .resource-item {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-left: 3px solid #3498db;
+            background-color: #ecf0f1;
+            border-radius: 4px;
+        }
+
+        .resource-item a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .resource-item a:hover {
+            text-decoration: underline;
+        }
+
+        .resource-item p {
+            margin-top: 5px;
+        }
+
+        .code-snippet {
+          background-color: #2d2d2d;
+          color: #f8f8f2;
+          padding: 10px;
+          border-radius: 5px;
+          overflow-x: auto;
+          font-family: 'Courier New', monospace;
+        }
+
+        .code-snippet span.keyword { color: #c2e06c; }
+        .code-snippet span.string { color: #f0c239; }
+        .code-snippet span.number { color: #ae81ff; }
+        .code-snippet span.comment { color: #75715e; }
+
+    </style>
+</head>
+<body>
+    <h1>Advanced Technical Minecraft Resources</h1>
+
+    <div class="resource-section">
+        <h2>Redstone and Automation</h2>
+        <div class="resource-item">
+            <h3>Mumbo Jumbo's Redstone Tutorials</h3>
+            <p><a href="https://www.youtube.com/c/MumboJumboOfficial">YouTube Channel</a> - Extensive tutorials on complex redstone mechanics and automation.</p>
+        </div>
+        <div class="resource-item">
+            <h3>Technical Minecraft Wiki</h3>
+            <p><a href="https://technical-minecraft.fandom.com/wiki/Technical_Minecraft_Wiki">Wiki Page</a> - Detailed information on advanced redstone, farms, and technical concepts.</p>
+        </div>
+        <div class="resource-item">
+          <h3>Example Redstone Code (Function Command)</h3>
+          <p>Example of a repeating function to control a piston:</p>
+          <pre class="code-snippet">
+<span class="comment"># functions/piston_control.mcfunction</span>
+<span class="keyword">execute</span> <span class="keyword">if</span> <span class="keyword">block</span> <span class="number">0</span> <span class="number">64</span> <span class="number">0</span> <span class="string">minecraft:redstone_block</span> <span class="keyword">run</span> <span class="keyword">setblock</span> <span class="number">0</span> <span class="number">65</span> <span class="number">0</span> <span class="string">minecraft:piston[facing=up]</span>
+<span class="keyword">execute</span> <span class="keyword">unless</span> <span class="keyword">block</span> <span class="number">0</span> <span class="number">64</span> <span class="number">0</span> <span class="string">minecraft:redstone_block</span> <span class="keyword">run</span> <span class="keyword">setblock</span> <span class="number">0</span> <span class="number">65</span> <span class="number">0</span> <span class="string">minecraft:air</span>
+          </pre>
+        </div>
+    </div>
+
+    <div class="resource-section">
+        <h2>Command Blocks and Data Packs</h2>
+        <div class="resource-item">
+            <h3>Minecraft Commands Wiki</h3>
+            <p><a href="https://minecraft.fandom.com/wiki/Commands">Wiki Page</a> - Comprehensive documentation on all Minecraft commands.</p>
+        </div>
+        <div class="resource-item">
+            <h3>Minecraft Data Pack Guide</h3>
+            <p><a href="https://minecraft.fandom.com/wiki/Data_pack">Wiki Page</a> - Information about creating and using data packs for custom gameplay.</p>
+        </div>
+        <div class="resource-item">
+          <h3>Example Data Pack Function (Scoreboard)</h3>
+          <p>Example function that increments a scoreboard objective:</p>
+          <pre class="code-snippet">
+<span class="comment"># data/my_datapack/functions/increment_score.mcfunction</span>
+<span class="keyword">scoreboard</span> <span class="keyword">players</span> <span class="keyword">add</span> <span class="keyword">@s</span> <span class="string">myScore</span> <span class="number">1</span>
+          </pre>
+        </div>
+    </div>
+
+    <div class="resource-section">
+        <h2>Farming and Efficiency</h2>
+        <div class="resource-item">
+            <h3>LogicalGeekBoy's Farming Tutorials</h3>
+            <p><a href="https://www.youtube.com/c/LogicalGeekBoy">YouTube Channel</a> - Guides on efficient and high-yield farms.</p>
+        </div>
+        <div class="resource-item">
+            <h3>Ilmango's Technical Farms</h3>
+            <p><a href="https://www.youtube.com/c/ilmango">YouTube Channel</a> - Extremely advanced and efficient farm designs.</p>
+        </div>
+        <div class="resource-item">
+            <h3>Example Farm Calculation (Rates)</h3>
+            <p>Example calculation of a sugarcane farm's theoretical output. Assume a row of 10 sugarcane, growing every 18 seconds on average:</p>
+            <p>$$ \text{Rate} = \frac{10 \text{ sugarcane}}{18 \text{ seconds}} \approx 0.55 \text{ sugarcane/second} $$</p>
+        </div>
+    </div>
+
+    <div class="resource-section">
+        <h2>World Generation and Customization</h2>
+        <div class="resource-item">
+            <h3>Custom World Generation Guide</h3>
+            <p><a href="https://minecraft.fandom.com/wiki/Custom_world_generation">Wiki Page</a> - Guide on customizing world generation using data packs.</p>
+        </div>
+        <div class="resource-item">
+          <h3>Example World Generation JSON (Custom Biome)</h3>
+          <p>Example part of a biome JSON file:</p>
+          <pre class="code-snippet">
+<span class="string">"temperature"</span><span class="keyword">:</span> <span class="number">0.8</span><span class="keyword">,</span>
+<span class="string">"downfall"</span><span class="keyword">:</span> <span class="number">0.4</span><span class="keyword">,</span>
+<span class="string">"precipitation"</span><span class="keyword">:</span> <span class="string">"rain"</span><span class="keyword">,</span>
+<span class="string">"effects"</span><span class="keyword">:</span> {
+  <span class="string">"sky_color"</span><span class="keyword">:</span> <span class="number">7907327</span><span class="keyword">,</span>
+  <span class="string">"fog_color"</span><span class="keyword">:</span> <span class="number">12638463</span><span class="keyword">,</span>
+  <span class="string">"water_color"</span><span class="keyword">:</span> <span class="number">4159204</span><span class="keyword">,</span>
+  <span class="string">"water_fog_color"</span><span class="keyword">:</span> <span class="number">329011</span>
+}
+          </pre>
+        </div>
+    </div>
+</body>
+</html>
